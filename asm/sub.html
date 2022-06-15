@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="../img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="../css/style_asm.css">
+    <style>
+        section form 
+        {
+            position: relative;
+            margin: 0 auto;
+            background-color: #eeeeee;
+            box-shadow: 1rem 1rem 0  #222;
+            padding: 2rem;
+            border-radius: 0.7rem;
+            border: 1px solid  #222;
+            margin-bottom: 1rem;
+            z-index: 2;
+        }
+
+        section h4
+        {
+            position: relative;
+            background-color: #b0000b;
+            color: #fff;
+            padding: 1rem;
+            margin: 0 auto;
+            margin-bottom: -0.8rem;
+            border-radius: 0.7rem  0.7rem 0 0  ;
+            box-shadow: 1rem 1rem 0  #222;
+            z-index: 1;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <header id="header">
+		<a href="#" class="Logo">
+			<img src="../img/logo.png">
+
+		</a>
+        <a href="../asm/gio_hang.html" class="cart">
+            <ion-icon name="cart-outline"></ion-icon>
+        
+        </a>
+        <a href="../asm/sub.html"class="cart">
+            <ion-icon name="person-circle-outline"></ion-icon>
+        </a>
+		<div id="toggle"></div>
+		<div id="navbar">
+			<ul>
+                <li><a href="../index.html">
+                    Trang chủ</a>
+                </li>
+				<li><a href="../asm/chi_tiet.html">Xem chi tiết</a></li>
+				<!-- <li><a href="#"></a></li>
+				<li><a href="#">FINAL ASM</a></li>
+				<li></li> -->
+			</ul>
+		</div>
+	</header>
+    <script src="../js/js_asm/menu.js"></script>
+
+    
+    
+    <main>
+        <section>
+                                        <!-- ĐĂNG KÝ -->
+            <div id="dangKy">
+                <h4 class="col-4 col-xl-2 text-center">ĐĂNG KÝ</h4>
+                <form action="#" name="register" method="GET" onsubmit="return formRegister();" class="sub col-sm-12 col-md-10 col-lg-5">
+                
+                    <div class="form-group">
+                        <label >Họ và tên: </label><input type="text" name="lastName" value="" placeholder="Nhập họ tên"
+                        class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label >Mật khẩu: </label><input type="password" name="password" value="" placeholder="Nhập mật khẩu"
+                        class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label >Giới tính: </label><br>
+                        <fieldset class="border border-secondary p-3">
+                            <input type="radio" value="Nam" name="gender"><label > &nbsp; Nam</label> &nbsp; 
+                            <input type="radio" value="Nữ"  name="gender"><label > &nbsp; Nữ</label>
+                        </fieldset>
+                    </div>
+
+                    <div class="form-group">
+                        <label >Số điện thoại: </label>
+                        <input type="number" name="cellphone" value="" placeholder="Nhập SĐT" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label   > Tỉnh</label>
+                        <select name="tinh" class="form-control">
+                            <option value="0">Chọn tỉnh</option>
+                            <option value="1">TPHCM</option>
+                            <option value="2">Hà nội</option>
+                            <option value="3">Cần Thơ</option>
+                        </select>
+                    </div>
+                
+                    <div class="form-group">
+                        <label > Thông tin bổ sung</label>
+                        <textarea name="bosung" class="form-control" rows="4" placeholder="Bổ sung thêm thông tin cá nhân"></textarea>
+                    </div>
+                    <div id="message"></div>
+                    <div class="form-group">
+                        <a  onclick="dang_nhap()"class="text-primary">Tôi đã có tài khoản</a>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="submit" name="submit" class="btn m-auto col-5" value="Đăng ký">
+                    </div>
+                    
+                    <div id="registerInfor_2"></div>
+                </form>
+            </div>
+
+
+            <div id="dangNhap" class="an_form">
+                                                     <!-- ĐĂNG NHẬP -->
+                <h4 class="col-4 col-xl-2 text-center">ĐĂNG NHẬP</h4>
+                <form action="#" name="formSign" method="GET" onsubmit="return formSign();" class="sub col-sm-12 col-md-10 col-lg-5">
+                
+                    <div class="form-group">
+                        <label >Họ và tên: </label><input type="text" name="lastName" value="" placeholder="Nhập họ tên"
+                        class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label >Mật khẩu: </label><input type="password" name="password" value="" placeholder="Nhập mật khẩu"
+                        class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <a onclick="dang_ky()" class="text-primary">Tôi chưa có tài khoản</a>
+                    </div>
+                    <div id="message"></div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" class="btn m-auto col-5" value="Đăng nhập">
+                    </div>
+                </form>
+            </div>
+            
+        </section>
+        <script src="../js/js_asm/asm_1.js"></script>
+        <script src="../js/js_asm/cart.js"></script>
+        <script src="../js/js_asm/sub.js"></script>
+    </main>
+    <footer>
+        <p> Được thiết kế bởi Đặng Minh Tài &copy; 2022 </p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
